@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <!--Viewport-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/et-line.css">
+
+        <!--favicon-->
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        
+
+        <!--Title-->
+        <title>Orinoco | Specialiste de l'ourson</title><meta name="title" content="Accueil - Orinoco">
+
+        <!--Meta-Robots  -->
+        <meta name="robots" content="INDEX,FOLLOW">
+        <meta name="googlebot" content="INDEX,FOLLOW">
+
+        <!--Meta Keywords-->
+        <meta name="keywords" content="Orinoco, Projet5 , Orinico site e-commerce">
+
+        <!--Descrition-->
+        <meta name="descrition" content="Orinoco site e-commerce, Openclassrooms">
+
+        <!-- Fontawesome -->
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://elielweb.com/">
+        <meta property="og:title" content="Orinoco, Projet5 , Orinico site e-commerce">
+        <meta property="og:description" content="Orinoco site e-commerce, Openclassrooms">
+        <meta property="og:image" content="">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://elielweb.com/">
+        <meta property="twitter:title" content="Orinoco, Projet5 , Orinico site e-commerce">
+        <meta property="twitter:description" content="Orinoco site e-commerce, Openclassrooms">
+        <meta property="twitter:image" content="">
+
+        <!--canonical-->
+        <link rel="canonical" href="https://elielweb.com/frontend/index.html" />
+        <!-- JavaScript -->
+
+        <script src="./assets/javascript/checkout.js" defer></script>
+
+    </head>
+    <body>
+
+<!-- début header -->
+   
+    <header>
+      <nav class="container">
+        
+          <ul>
+           <li> <a href="index.html"> <img class="logo" src="../images/logo.png"  alt="logo Orinoco"></a></li>
+          
+      
+           <li class="votre_panier"> <button id="mon_panier"> Votre panier <i class="fas fa-shopping-cart"></i>
+            <span id="total_item">0</span></button></li>
+          </ul>
+        
+      </nav>
+     
+    </header>
+    <div class="borderDemo"></div>
+<!-- Début Main -->
+<main>
+	<h1 class="text-center"> Votre panier	</h1>
+	
+	
+	<!-- Récapitulatif -->
+	<section class="recap">	
+
+		<div id="nos-produits" > </div>
+
+		<div class="resume">
+			<h2 class="panier"> Votre panier contient: <span id="votre_panier"></span> </h2>
+			<p class="panier"><span id="total_a_payer"></span></p-->
+		</div>
+	</section>
+
+	<!-- Formulaire -->
+
+	<section class="formulaire">
+		<h2 id="merci"></h2><br><br>
+		
+		<form method="post" action="#" id="formulaire">
+			<div class="container">
+        <h3>Vos informations</h3>
+
+      <label for="nom"><i class="fa fa-user"></i> Nom</label>            
+      <input type="text" name="nom" id="nom" placeholder="M. Doe" class="inputgras">
+      <p id="erreurNom"></p> 
+      
+			<!--label for="nom"><i class="fa fa-user"></i> Nom</label>
+			<input type="text" name="nom" id="nom" placeholder="Exemple: Dupont" class="inputgras"> 
+			<p id="erreurNom"></p-->
+			
+			<label for="prenom"> 2. Prénom: <span>*</span> </label> 
+			<input type="text" name="prenom" id="prenom" placeholder="Exemple: Jean" class="inputgras">
+			<p id="erreurPrenom"></p>
+			
+
+			<label for="adresse" > 3. Adresse de livraison: <span>*</span></label>
+			<input type="text" name="adresse" id="adresse" placeholder="Exemple: 04, rue de la Fontaine" class="inputgras"> 
+			<p id="erreurAdresse"></p>
+			
+			
+			<label for="ville"> 4. Ville:<span>*</span> </label> 
+			<input type="text" name="ville" id="ville" placeholder="Exemple: Paris" class="inputgras">
+			<p id="erreurVille"></p>
+
+			<label for="code_postal"> 5. Code postal: <span>*</span></label> 
+			<input type="number" name="code_postal" id="code_postal" placeholder="Exemple:75020" class="inputgras">
+			<p id="erreurCodepostal"></p>
+		
+			<label for="mail"> 6. E-Mail:<span>*</span> </label> 
+			<input type="email" name="mail" id="mail" placeholder="Exemple: JeanDupont2000@gmail.com" class="inputgras">
+			<p id="erreurMail"></p>
+
+			<label for="tel"> 7. N° Tél: <span>*</span></label> 
+			<input type="number" name="tel" id="tel" placeholder="Format: 0999999999 Exemple: 0651524247" class="inputgras">
+			<p id="erreurTel" ></p>
+</div>
+			<button id="confirmer_commande" type="submit" name="Confirmer votre commande " class="inputgras"> Valider ma commande</button>
+			
+			
+		</form>
+
+	</section>
+
+</main>	
+        <!-- Début Footer -->
+
+      <div class="borderDemo"></div>
+      
+        <!-- Footer - bloc-8 -->
+<footer class="footer">
+      <br>
+        <div class="bloc bgc-atomic-tangerine d-bloc" id="bloc-8">
+          <div class="container bloc-sm">
+            <div class="row">
+              
+                <div class="row">
+                  <div class="col-sm-2 ">
+                    <p><i class="fas fa-blender-phone"></i></p>
+                    Service clients <br> 0800 000 000               
+                  </div>
+                  <div class="col-sm-2">
+                    <p><i class="fas fa-euro-sign"></i></p>
+                    Satisfaits ou remboursés          
+                  </div>
+                  <div class="col-sm-2">
+                    <p><i class="fab fa-cc-visa"></i></p>
+                    Payement sécurisé           
+                  </div>
+                  <div class="col-sm-2">
+                    <p><i class="fas fa-shuttle-van"></i></p>
+                    Livraison Gratuite            
+                  </div>
+                  <div class="col-sm-2">
+                    <p><i class="fas fa-address-card"></i></p>
+                    Programme de fidélité
+                  </div>
+                </div><br><br><br><br>
+                <div class="newsletter">
+                      <p class="newsletter"> Vous inscrire à la newsletter: 
+                      <input class="mail" type="email" placeholder="Votre e-mail"> 
+                      <button id="newsletter">Je m'inscris</button></p>
+                </div>
+            </div>
+                <div class="row row-no-gutters social">
+                  <div class="col-sm-3">
+                    <div class="text-center">
+
+                      <a class="social" href="index.html"><span class="fab fa-twitter"></span></a>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="text-center">
+        
+                      <a class="social" href="index.html"><span class="fab fa-facebook-f"></span></a>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="text-center">
+
+                      <a class="social" href="index.html"><span class="fab fa-linkedin-in"></span></a>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="text-center">
+
+                      <a class="social" href="index.html"><span class="fab fa-instagram-square"></span></a>
+                    </div><br><br><br>
+                  </div>
+                </div>     
+                            
+                            <form  action="mailto:orinoco@orinoco.com" method="get">
+                            <button class="contact">Contactez-nous</button>
+                           </form>
+        </div>                  
+        </div>        
+
+</footer>
+ 
+<!-- Javascript -->
+<script src="./assets/js/jquery-2.1.0.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/blocs.js"></script>
+<script src="./assets/js/jquery.touchSwipe.js" defer></script>
+<script src="./assets/js/gmaps.js"></script>
+
+</body>
+</html>
+
+
+
