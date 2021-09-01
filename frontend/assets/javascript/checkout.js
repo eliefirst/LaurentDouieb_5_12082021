@@ -214,11 +214,12 @@ let order={
     };
      
 //2- Envoi de la requête Fetch avec la méthode POST
+function confirme() {
 let promise=fetch("http://localhost:3000/api/teddies/order",{
     method:"POST",
     body:JSON.stringify(order),
     headers:{"Content-Type":"application/json",},
-});
+ });
 
 //3- Réception des données serveur
 promise.then(async(response)=>{
@@ -237,11 +238,11 @@ promise.then(async(response)=>{
         // Stockage des informations retournées par le serveur   
         localStorage.setItem("commandeInfos",JSON.stringify(commandeInfos));   
         document.location.href="confirmation.html";
-        }
-
+        
+}
 // En cas d'échec de la requête
     catch(err){
         document.getElementById("merci")
         .innerText="Merci de saisir le formulaire pour votre commande. "
     }
-});
+ })};

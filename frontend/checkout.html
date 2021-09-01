@@ -106,15 +106,14 @@
 			<input type="text" name="nom" id="nom" placeholder="Exemple: Dupont" class="inputgras"> 
 			<p id="erreurNom"></p-->
 			
-			<label for="prenom"> 2. Prénom: <span>*</span> </label> 
+			<label for="prenom"><i class="fa fa-user-plus"></i> Prénom: <span>*</span> </label> 
 			<input type="text" name="prenom" id="prenom" placeholder="Exemple: Jean" class="inputgras">
 			<p id="erreurPrenom"></p>
 			
 
 			<label for="adresse" > 3. Adresse de livraison: <span>*</span></label>
 			<input type="text" name="adresse" id="adresse" placeholder="Exemple: 04, rue de la Fontaine" class="inputgras"> 
-			<p id="erreurAdresse"></p>
-			
+			<p id="erreurAdresse"></p>			
 			
 			<label for="ville"> 4. Ville:<span>*</span> </label> 
 			<input type="text" name="ville" id="ville" placeholder="Exemple: Paris" class="inputgras">
@@ -132,7 +131,7 @@
 			<input type="number" name="tel" id="tel" placeholder="Format: 0999999999 Exemple: 0651524247" class="inputgras">
 			<p id="erreurTel" ></p>
 </div>
-			<button id="confirmer_commande" type="submit" name="Confirmer votre commande " class="inputgras"> Valider ma commande</button>
+			<button id="confirmer_commande" type="submit" onclick="confirme();" name="Confirmer votre commande " class="inputgras"> Valider ma commande</button>
 			
 			
 		</form>

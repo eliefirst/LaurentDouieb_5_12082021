@@ -19,5 +19,6 @@ if (localStorage.getItem("paniers")!=null){
 	};
 };
 // Afficher le prix total
+let commandeInfos = JSON.parse(localStorage.getItem("commandeInfos")); 
 document.getElementById('total_commande')
 .textContent=commandeInfos.prix_a_payer + '  €'
