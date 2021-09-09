@@ -1,28 +1,3 @@
-
-// Si le local storage existe, récupérer les produits du panier
-// Insérer la quantité de produit dans le panier
-// Possibilité d'accéder à la page panier directement en cliquant sur Panier
-//if (localStorage.getItem("paniers")!=null){
-//	paniers=JSON.parse(localStorage.getItem("paniers"));
-//	let total=0;
-
-//	for (var i = 0; i<paniers.length; i++) {
-//		total=total+paniers[i].quantite;
-//		document.getElementById("total_item").innerText=total;
-//		mon_panier.onclick		=()=> {
-//		document.location.href	="./frontend/checkout.html"
-//	};
-//};
-
-// Si local storage est vide, mettre le panier à 0 
-// Si l'utilisateur clique sur le panier, on affiche un message		
-	
-//} else {
-//	let total=0;
-//	mon_panier.onclick=()=> {
-//	alert("Votre panier est vide !");
-//	};
-//};
 // Si le local storage existe, récupérer les produits du panier
 // Afficher le nombre d'article dans le panier
 let paniers=[];

@@ -23,15 +23,4 @@ let commandeInfos = JSON.parse(localStorage.getItem("commandeInfos"));
 document.getElementById('total_commande')
 .textContent=commandeInfos.prix_a_payer + '  €'
 
-//Recupération OrderId----//
-let retourServeur = JSON.parse(localStorage.getItem("commandeInfos")); 
-document.getElementById('orderId')
-.textContent=retourServeur.orderId + '  '
-
-// Vider le localStorage (panier et données formulaire)
-         localStorage.clear();
-
-
-
-
 

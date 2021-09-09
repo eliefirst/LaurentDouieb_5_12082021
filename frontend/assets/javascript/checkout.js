@@ -113,6 +113,7 @@ for (let i in paniers) {
         localStorage.setItem("paniers",JSON.stringify(paniers));
         miseAjour(miseAjour);
 
+
     // Tester le prix à payer
         if (prix_a_payer<1) {
             alert("Vous avez vidé votre panier!");
@@ -214,7 +215,7 @@ let order={
     };
      
 //2- Envoi de la requête Fetch avec la méthode POST
-function confirme() {
+function valide() {
 let promise=fetch("http://localhost:3000/api/teddies/order",{
     method:"POST",
     body:JSON.stringify(order),
@@ -226,19 +227,30 @@ promise.then(async(response)=>{
     try{
         const retourServeur=await response.json();
         let commandeInfos={
-            identifiant:retourServeur.orderId,
+            orderId:retourServeur.orderId,
             prix_a_payer:prix_a_payer,
             nomContact:retourServeur.contact.firstName,
-            prenomContact:retourServeur.contact.lastName
-        }
+            prenomContact:retourServeur.contact.lastName,
+             
 
+   }
+         //recuperation orderId de reponse serveur
+         console.log("orderId1");
+         console.log(retourServeur.orderId);
+        
+
+          //id cd confirmation localStorage
+        localStorage.setItem("orderId2",JSON.stringify(retourServeur.orderId));
+        
         // Vider le localStorage (panier et données formulaire)
-        localStorage.clear();
+        //localStorage.clear();
 
         // Stockage des informations retournées par le serveur   
         localStorage.setItem("commandeInfos",JSON.stringify(commandeInfos));   
         document.location.href="confirmation.html";
-        
+	    // Vider le localStorage (panier et données formulaire)
+         //localStorage.clear();
+
 }
 // En cas d'échec de la requête
     catch(err){
