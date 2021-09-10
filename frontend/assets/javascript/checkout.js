@@ -19,7 +19,7 @@ miseAjour();// Fin fonction
 // Eviter les doublons des produits sélectionnés
 // Pour afficher une seule carte pour chaque produit sélectionné
 let nouveauPanier=[];
-for(let i=0;i<paniers.length;i++){
+for(let i = 0 ; i<paniers.length; i++) {
     let article=paniers[i];
     let key=paniers[i].nom+"_"+paniers[i].couleur;
     if(nouveauPanier.hasOwnProperty(key)){
@@ -44,7 +44,7 @@ for (let i in paniers) {
     let carte               =document.createElement("div");
     let image_produit       =document.createElement("img");
     let nombre_produit      =document.createElement("span");
-    let name_price   =document.createElement("div");
+    let name_price          =document.createElement("div");
     let nom_produit         =document.createElement("p");
     let price_product        =document.createElement("p");
     let prix_total          =document.createElement("p");
@@ -166,9 +166,8 @@ let messages=[
     "Ce prénom n'est pas valide! ",
     "Cette adresse n'est pas valide! ",
     "Cette ville n'est pas reconnue! ",
-    "Ce code postal est invalide! ",
     "Cet e-mail est invalide! ",
-    "Ce numéro est invalide! "
+    
 ];
 
 // Ecouter le bouton submit // Valider le formulaire
@@ -176,11 +175,6 @@ formulaire.addEventListener('submit',function (f){
 for (let i=0; i < mesInput.length; i++){
     if (mesInput[i].value.trim()=="") {
         erreur[i].textContent='Ce champs est obligatoire!'
-        erreur[i].classList.add('message_erreur');
-        mesInput[i].style.border='1px dashed red';
-        f.preventDefault();
-    }else if (regex[i].test(mesInput[i].value)==false){
-        erreur[i].textContent=messages[i];
         erreur[i].classList.add('message_erreur');
         mesInput[i].style.border='1px dashed red';
         f.preventDefault();
@@ -199,23 +193,39 @@ let contact={
         email:mail.value,
         };
 localStorage.setItem("contact",JSON.stringify(contact));
+valide();
 });
 let contact=JSON.parse(localStorage.getItem('contact'));
 
-// Envoi des données au serveur avec fetch POST
-// 1- Regrouper le panier et le formulaire dans un objet ORDER
-let errayStringsProducts=[];
-for (var i = 0; i < paniers.length; i++) {
-    id=paniers[i].id_;
-    errayStringsProducts.push(id);
-}
-let order={
-    contact:contact,
-    products:errayStringsProducts,
-    };
+
      
+
+	// Envoi des données au serveur avec fetch POST
+    // 1- Regrouper le panier et le formulaire dans un objet ORDER
+    let errayStringsProducts=[];
+    for (var i = 0; i < paniers.length; i++) {
+        id=paniers[i].id_;
+        errayStringsProducts.push(id);
+    }
+    let order={
+       contact:contact,
+       products:errayStringsProducts,
+    };
 //2- Envoi de la requête Fetch avec la méthode POST
 function valide() {
+    let contact=JSON.parse(localStorage.getItem('contact'));	
+    // Envoi des données au serveur avec fetch POST
+    // 1- Regrouper le panier et le formulaire dans un objet ORDER
+    let errayStringsProducts=[];
+    for (var i = 0; i < paniers.length; i++) {
+        id=paniers[i].id_;
+        errayStringsProducts.push(id);
+    }
+    let order={
+       contact:contact,
+       products:errayStringsProducts,
+    };
+
 let promise=fetch("http://localhost:3000/api/teddies/order",{
     method:"POST",
     body:JSON.stringify(order),
