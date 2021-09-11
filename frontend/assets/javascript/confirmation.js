@@ -11,6 +11,7 @@ if (localStorage.getItem("paniers")!=null){
 		document.location.href="checkout.html"
 	};
 };
+
 // Si local storage est vide, mettre le panier à 0		
 } else {
 	let total=0;
@@ -29,8 +30,9 @@ document.getElementById('orderId')
 .textContent=retourServeur.orderId + '  '
 
 // Vider le localStorage (panier et données formulaire)
+         
          localStorage.clear();
-
+         
 
 
 
