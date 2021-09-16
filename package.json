@@ -4,12 +4,15 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",    
+    "sass": "sass --watch ./frontend/assets/sass/scss/:./frontend/assets/sass/css",
+    "prefix": "postcss ./frontend/assets/sass/css/style.css --use autoprefixer -d ./frontend/assets/sass/css/prefixed/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.16.4",
     "uuid": "^3.3.2"
+    
   }
 }
