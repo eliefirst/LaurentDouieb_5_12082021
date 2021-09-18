@@ -37,16 +37,16 @@
 .section {
   background: $color-primary;
   display: block;
-  padding-left: 4%;
+  //padding-left: 4%;
 }
-@media only screen and (min-width: 600px) {
+/*@media only screen and (min-width: 600px) {
   .container,
   .footer,
   .nav,
   .section {
     padding-left: 2%;
   }
-}
+}*/
 //header//@at-root
 .votre_panier {
   display: flex;

@@ -122,6 +122,10 @@ button#newsletter,
   width: 100%;
 }
 
+button#newsletter {
+  margin-left: 5%;
+}
+
 .fas,
 .fab {
   font-size: 300%;
@@ -180,17 +184,16 @@ button#newsletter,
 .section {
   background: #f3e9f1;
   display: block;
-  padding-left: 4%;
 }
 
-@media only screen and (min-width: 600px) {
+/*@media only screen and (min-width: 600px) {
   .container,
-.footer,
-.nav,
-.section {
+  .footer,
+  .nav,
+  .section {
     padding-left: 2%;
   }
-}
+}*/
 .votre_panier {
   display: flex;
   width: 100%;
