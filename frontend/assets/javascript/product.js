@@ -7,10 +7,16 @@ if (localStorage.getItem("paniers") != null) {
 	for (var i = 0; i < paniers.length; i++) {
 		total = total + paniers[i].quantite;
 		document.getElementById("total_item").innerText = total;
+		console.log("localStorage")
+		console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
+		
 		mon_panier.onclick = () => {
 			document.location.href = "checkout.html"
 		};
 	};
+	    console.log ("TtItem")
+	    console.log (total_item)
+		//console.log(total_item===null) // true
 	// Si local storage est vide, mettre le panier à 0		
 } else {
 	let total = 0;
@@ -49,6 +55,9 @@ fetch(api2)
 		// Insérer les éléments en HTML
 		document.getElementById("produit_selectionne")
 			.textContent = data.name;
+			
+			console.log ("Selection")
+	        console.log (produit_selectionne)
 
 		// Insérer la div carte et le lien
 		let carte_produit = document.getElementById('nos-produits');
@@ -71,12 +80,15 @@ fetch(api2)
 		// Insérer la description du produit
 		carte.appendChild(description).classList.add("description");
 		description.textContent = data.description;
+		console.log ("description")
+	    console.log (description)
 
 		// Insérer les options choix de couleurs
 		for (var couleur = 0; couleur < data.colors.length; couleur++) {
 			const choix = document.createElement("option");
 			let choix_couleur = document.getElementById("choix_couleur");
 			choix_couleur.appendChild(choix).textContent = data.colors[couleur];
+			
 		}
 		let button = document.querySelector('button');
 

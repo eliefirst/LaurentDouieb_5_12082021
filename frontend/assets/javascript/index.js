@@ -4,6 +4,8 @@ let paniers=[];
 if (localStorage.getItem("paniers")!=null){
 	paniers=JSON.parse(localStorage.getItem("paniers"));
 	let total=0;
+	console.log ("si articles panier")
+	console.log (paniers)
 	for (var i = 0; i<paniers.length; i++) {
 		total=total+paniers[i].quantite;
 		document.getElementById("total_item").innerText=total;

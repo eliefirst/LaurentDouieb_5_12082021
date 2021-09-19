@@ -51,6 +51,9 @@ for (let i in paniers) {
     let supprimer = document.createElement("bouton");
     let ajouter = document.createElement("bouton");
 
+
+    console.log("stringify")
+    console.log(JSON.stringify(paniers))
     // Récupérer les articles dans le panier
     let carte_produit = document.getElementById('nos-produits');
     carte_produit.appendChild(lien).href = "#";
@@ -221,7 +224,7 @@ function valide() {
         body: JSON.stringify(order),
         headers: { "Content-Type": "application/json", },
     });
-
+    
     //3- Réception des données serveur
     promise.then(async (response) => {
         try {
