@@ -142,7 +142,7 @@ for (let i in paniers) {
         prix_total.textContent = 'Prix total: ' + paniers[i].prix + ' €';
         // Mettre à jour le prix à payer du panier
         total_a_payer.textContent = 'Total à payer: ' + prix_a_payer + ' €';
-        // Mise à jour du localStorage et les valeurs fonction           
+        // Mise à jour du localStorage et les valeurs fonction
         localStorage.setItem("paniers", JSON.stringify(paniers));
         miseAjour(miseAjour);
     });//fin ecoute Ajouter
